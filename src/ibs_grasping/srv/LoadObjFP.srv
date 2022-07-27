@@ -1,0 +1,6 @@
+sensor_msgs/PointCloud2 hand
+float32 hx
+float32 hy
+float32 hz
+---
+bool ok
