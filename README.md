@@ -27,10 +27,10 @@ First, you need to compile ROS packages in the root directory:
 Then run devel/setup.bash to configurate environment setting:
 > source devel/setup.bash
 
-Before Test or training, you need to run IBS service:
+Before test or training, you need to run IBS service:
 > ROSRUN ibs_grasping env
 
-For Test:
+For test:
 >ROSRUN ibs_env main.py --model_name [model_name]
 
 For quick test:
@@ -47,8 +47,8 @@ You can use [RVIZ](http://wiki.ros.org/rviz) package to visualize the IBS. The c
 
 
 ## Data Preparation
-The objects used in this work are mainly from [this](https://drive.google.com/file/d/1LD12JHqKKb4TjTy4vGZLrJoXsQZLOBPv/view),
-Which includes 500 watertight objects collected from four datasets (KIT, GD, YCB, BIGBIRD) as well as their feasible grasps
+The objects used in this work can be download [here](https://drive.google.com/file/d/1LD12JHqKKb4TjTy4vGZLrJoXsQZLOBPv/view),
+which includes 500 watertight objects collected from four datasets (KIT, GD, YCB, BIGBIRD) as well as their feasible grasps
 
 
 The data processing script is provided in the root directory.
@@ -93,4 +93,6 @@ The source code is released under GPLv3 license.
 
 ## Contact
 If you have any questions, feel free to email Qijin She (qijinshe@outlook.com)
+
+
 If you want to get complete code of "deepdifferentiablegrasp", please contact Liu Min (gfsliumin@gmail.com)
