@@ -12,11 +12,13 @@ In this project, We adopt Interaction Bisector Surface (IBS), which is a surface
 This probject partly depends on ROS, you need to [install ROS](http://wiki.ros.org/melodic/Installation) first (In our environment, we use ROS melodic).
 
 The necessary Python packages are list in the file "requirement.txt".
+
+
 You can run the command to install them all:
 > pip install -r requirement.txt
 
 "deepdifferentiablegrasp" is also important in our project.
-Here we only provide [compiled files]().
+Here we only provide [compiled files](https://drive.google.com/drive/folders/1xSJMm63BTmK7nC0Cjk6wA3so6irjcQXJ).
 
 
 ## Running
@@ -39,7 +41,7 @@ For quick test:
 For trainning
 >rosrun ibs_env main.py --train_model
 
-[Pretrained models]() are also provided
+[Pretrained models](https://drive.google.com/drive/folders/1fK5Ni-Zc8-WNkAGDv7tapAMoyKSDmpja) are also provided
 
 
 # Visualization
