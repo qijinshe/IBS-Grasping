@@ -28,16 +28,16 @@ Then run devel/setup.bash to configurate environment setting:
 > source devel/setup.bash
 
 Before test or training, you need to run IBS service:
-> ROSRUN ibs_grasping env
+> rosrun ibs_grasping env
 
 For test:
->ROSRUN ibs_env main.py --model_name [model_name]
+>rosrun ibs_env main.py --model_name [model_name]
 
 For quick test:
->ROSRUN ibs_env main.py --model_name [model_name] --quick
+>rosrun ibs_env main.py --model_name [model_name] --quick
 
 For trainning
->ROSRUN ibs_env main.py --train_model
+>rosrun ibs_env main.py --train_model
 
 [Pretrained models]() are also provided
 
