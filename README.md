@@ -26,20 +26,26 @@ Here we only provide [compiled files](https://drive.google.com/drive/folders/1xS
 First, you need to compile ROS packages in the root directory:
 >catkin_make
 
+
 Then run devel/setup.bash to configurate environment setting:
 > source devel/setup.bash
+
 
 Before test or training, you need to run IBS service:
 > rosrun ibs_grasping env
 
+
 For test:
 >rosrun ibs_env main.py --model_name [model_name]
+
 
 For quick test:
 >rosrun ibs_env main.py --model_name [model_name] --quick
 
+
 For trainning
 >rosrun ibs_env main.py --train_model
+
 
 [Pretrained models](https://drive.google.com/drive/folders/1fK5Ni-Zc8-WNkAGDv7tapAMoyKSDmpja) are also provided
 
@@ -54,14 +60,14 @@ which includes 500 watertight objects collected from four datasets (KIT, GD, YCB
 
 
 The data processing script is provided in the root directory.
-The file will generate for you, including:
+The file will generate following files for you:
 * ".pcd": pointclouds sampled from origin meshes, used for IBS computation.
 * "_vhacd.obj" and ".urdf": approximate convex decomposition of objectsusing the VHACD algorithm and the URDF wrappers of objects, used for Pybullet Simulation.
 * ".bvh" (optional): Precomputed files, used for grasp quality computation. If you don't want to train models or compute grasp quality, you don't need to generate these files.
 
 
 ## Acknowledgments
-Some codes are modified from some projects, Thanks for their
+Some codes are modified from some projects. Thanks for their
 excellent works: 
 
 
