@@ -58,8 +58,8 @@ parser.add_argument('--start_steps', type=int, default=50000, metavar='Nastype',
 parser.add_argument('--replay_size', type=int, default=100000, metavar='N',
                     help='size of replay buffer (default: 1000000)')
 
-parser.add_argument('--model_name', type=str, default='3_OURS1', metavar='NAME',
-                    help="the name of the model (default: 3_OURS1")
+parser.add_argument('--model_name', type=str, default='fine', metavar='NAME',
+                    help="the name of the model (default: fine")
 parser.add_argument('--quick', action='store_true', help="test on small cases")
 parser.add_argument('--train_model', action='store_true', help="train model")
 parser.add_argument('--con', action='store_true', help="continue train the given model")
