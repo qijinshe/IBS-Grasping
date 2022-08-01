@@ -20,14 +20,12 @@ You can run the command to install them all:
 "deepdifferentiablegrasp" is also important in our project.
 Here we only provide [compiled files](https://drive.google.com/drive/folders/1xSJMm63BTmK7nC0Cjk6wA3so6irjcQXJ).
 
-
-## Running
-
-First, you need to compile ROS packages in the root directory:
+Last, you need to compile ROS packages in the root directory:
 >catkin_make
 
 
-Then run devel/setup.bash to configurate environment setting:
+## Running
+First, run devel/setup.bash to configurate environment setting:
 > source devel/setup.bash
 
 
@@ -63,7 +61,7 @@ The data processing script is provided in the root directory.
 The file will generate following files for you:
 * ".pcd": pointclouds sampled from origin meshes, used for IBS computation.
 * "_vhacd.obj" and ".urdf": approximate convex decomposition of objectsusing the VHACD algorithm and the URDF wrappers of objects, used for Pybullet Simulation.
-* ".bvh" (optional): Precomputed files, used for grasp quality computation. If you don't want to train models or compute grasp quality, you don't need to generate these files.
+* ".bvh" (optional): precomputed files, used for grasp quality computation. If you don't want to train models or compute grasp quality, you don't need to generate these files.
 
 
 ## Acknowledgments
