@@ -165,7 +165,7 @@ if __name__ == "__main__":
     #     if not os.path.exists(urdf_dir):
     #         os.makedirs(urdf_dir)
     #     vhacd_url = os.path.join(new_root_dir, name, "urdf",  "%s_vhacd.obj"%(name))
-    #     log_url = os.path.join(new_root_dir, name, "urdf",  "%s_vhacd.obj"%(name))
+    #     log_url = os.path.join(new_root_dir, name, "urdf",  "%s_vhacd.log"%(name))
     #     model_url = os.path.join(new_root_dir, name, 'shape', name+'.obj')
     #     p.vhacd(model_url, vhacd_url, log_url)
     #     generate_urdf("%s_vhacd.obj"%(name), urdf_dir, urdf_dir)
