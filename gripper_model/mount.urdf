@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<robot name="mount">
+
+    <link name="mount_base_link">
+    <inertial>
+        <mass value="0"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    </link>
+
+    <link name="link_x">
+    <inertial>
+        <mass value="0"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    </link>
+
+    <link name="link_y">
+    <inertial>
+        <mass value="0"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    </link>
+
+    <link name="link_z">
+    <inertial>
+        <mass value="0"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    </link>
+
+    <link name="link_xy">
+    <inertial>
+        <mass value="0"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    </link>
+
+    <link name="link_yz">
+    <inertial>
+        <mass value="0"/>
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    </link>
+
+    <link name="mount_link">
+        <inertial>
+            <mass value="0.5"/>
+            <inertia  ixx="1.0" ixy="1.0"  ixz="1.0"  iyy="1.0"  iyz="1.0"  izz="1.0" />
+        </inertial>
+    </link>
+  
+    <joint name="joint_x" type="prismatic">
+        <parent link="mount_base_link"/>
+        <child link="link_x"/>
+        <origin xyz= "0 0 0.0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="-1000" upper="1000" velocity="0.5"/>
+    </joint>
+
+    <joint name="joint_y" type="prismatic">
+        <parent link="link_x"/>
+        <child link="link_y"/>
+        <origin xyz= "0 0 0.0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="-1000" upper="1000" velocity="0.5"/>
+    </joint>
+
+    <joint name="joint_z" type="prismatic">
+        <parent link="link_y"/>
+        <child link="link_z"/>
+        <origin xyz= "0 0 0.0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000.0" lower="-1000" upper="1000" velocity="0.5"/>
+    </joint>
+
+    <joint name="joint_revolute_1" type="revolute">
+        <parent link="link_z"/>
+        <child link="link_xy"/>
+        <origin xyz= "0 0 0.0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="1000.0" lower="-1000" upper="1000" velocity="2"/>
+    </joint>
+
+    <joint name="joint_revolute_2" type="revolute">
+        <parent link="link_xy"/>
+        <child link="link_yz"/>
+        <origin xyz= "0 0 0.0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="-1000" upper="1000" velocity="2"/>
+    </joint>
+
+    <joint name="joint_revolute_3" type="revolute">
+        <parent link="link_yz"/>
+        <child link="mount_link"/>
+        <origin xyz= "0 0 0.0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="1000.0" lower="-1000" upper="1000" velocity="2"/>
+    </joint>
+
+</robot>

@@ -1,0 +1,779 @@
+<?xml version='1.0' encoding='ASCII'?>
+<robot name="hand2">
+  <link name="base_link">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="base_link_palm" type="fixed">
+    <origin rpy="0.00000000 0.00000000 0.00000000"/>
+    <parent link="base_link"/>
+    <child link="Palm"/>
+  </joint>
+  <link concave="yes" name="Palm">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/Palm.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/Palm.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="2.5925e-08" ixy="1.3999e-08" ixz="-1.1163e-09" iyy="3.7234e-08" iyz="-8.9606e-10" izz="5.8795e-08"/>
+      <origin xyz="0.04100552 -0.01850690 -0.00249788"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="LF_Meta3">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/LF_Meta3.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/LF_Meta3.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.20000000"/>
+      <inertia ixx="2.1413e-09" ixy="8.7014e-10" ixz="6.4189e-11" iyy="2.0615e-09" iyz="-5.4035e-11" izz="3.3621e-09"/>
+      <origin xyz="-0.01942108 0.02372451 -0.00040935"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="Knuckle0">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/Knuckle0.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/Knuckle0.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="7.0470e-11" ixy="-5.6402e-13" ixz="-1.1142e-13" iyy="6.9810e-11" iyz="1.6546e-13" izz="8.1228e-11"/>
+      <origin xyz="-0.00022880 -0.00034175 -0.00051518"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Prox0">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Prox0.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Prox0.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="5.0785e-10" ixy="3.0117e-11" ixz="-1.0495e-11" iyy="2.2465e-09" iyz="-4.4207e-13" izz="2.1476e-09"/>
+      <origin xyz="-0.01948266 -0.00002089 -0.00055437"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Middle0">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Middle0.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Middle0.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="3.2017e-10" ixy="-3.3992e-13" ixz="7.7135e-13" iyy="1.1345e-09" iyz="1.1622e-13" izz="1.0870e-09"/>
+      <origin xyz="-0.01350604 0.00004184 -0.00001214"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Distal0">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Distal0.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Distal0.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="1.1170e-10" ixy="-5.7108e-13" ixz="-2.0113e-14" iyy="2.1016e-10" iyz="1.4316e-13" izz="1.9089e-10"/>
+      <origin xyz="-0.01424241 0.00004708 -0.00000827"/>
+    </inertial>
+  </link>
+  <link name="[LF_Meta3Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="Palm_[LF_Meta3Theta]" type="revolute">
+    <origin rpy="1.57079633 0.00000000 0.95993109" xyz="0.06360219 -0.00774511 0.00000000"/>
+    <parent link="Palm"/>
+    <child link="[LF_Meta3Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="0.0" upper="0.785398163397" velocity="2.00000000"/>
+  </joint>
+  <joint name="[LF_Meta3Theta]_LF_Meta3" type="fixed">
+    <origin rpy="-1.57079633 -0.00000000 0.00000000" xyz="0.03700000 0.00000000 0.00000000"/>
+    <parent link="[LF_Meta3Theta]"/>
+    <child link="LF_Meta3"/>
+  </joint>
+  <link name="[Knuckle0Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="LF_Meta3_[Knuckle0Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="LF_Meta3"/>
+    <child link="[Knuckle0Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="-0.261799387799" upper="0.261799387799" velocity="2.00000000"/>
+  </joint>
+  <joint name="[Knuckle0Theta]_Knuckle0" type="fixed">
+    <origin rpy="1.57079633 -0.00000000 -0.95993109" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="[Knuckle0Theta]"/>
+    <child link="Knuckle0"/>
+  </joint>
+  <link name="[F_Prox0Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="Knuckle0_[F_Prox0Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="Knuckle0"/>
+    <child link="[F_Prox0Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="-0.261799387799" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Prox0Theta]_F_Prox0" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.04500000 0.00000000 0.00000000"/>
+    <parent link="[F_Prox0Theta]"/>
+    <child link="F_Prox0"/>
+  </joint>
+  <link name="[F_Middle0Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="F_Prox0_[F_Middle0Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="F_Prox0"/>
+    <child link="[F_Middle0Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="0.0" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Middle0Theta]_F_Middle0" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.02500000 0.00000000 0.00000000"/>
+    <parent link="[F_Middle0Theta]"/>
+    <child link="F_Middle0"/>
+  </joint>
+  <link name="[F_Distal0Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="F_Middle0_[F_Distal0Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="F_Middle0"/>
+    <child link="[F_Distal0Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="0.0" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Distal0Theta]_F_Distal0" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.03000000 0.00000000 0.00000000"/>
+    <parent link="[F_Distal0Theta]"/>
+    <child link="F_Distal0"/>
+  </joint>
+  <link concave="yes" name="Knuckle1">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/Knuckle1.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/Knuckle1.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="7.0470e-11" ixy="-5.6402e-13" ixz="-1.1142e-13" iyy="6.9810e-11" iyz="1.6546e-13" izz="8.1228e-11"/>
+      <origin xyz="-0.00022880 -0.00034175 -0.00051518"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Prox1">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Prox1.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Prox1.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="5.0785e-10" ixy="3.0117e-11" ixz="-1.0495e-11" iyy="2.2465e-09" iyz="-4.4207e-13" izz="2.1476e-09"/>
+      <origin xyz="-0.01948266 -0.00002089 -0.00055437"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Middle1">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Middle1.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Middle1.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="3.2017e-10" ixy="-3.3992e-13" ixz="7.7135e-13" iyy="1.1345e-09" iyz="1.1622e-13" izz="1.0870e-09"/>
+      <origin xyz="-0.01350604 0.00004184 -0.00001214"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Distal1">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Distal1.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Distal1.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="1.1170e-10" ixy="-5.7108e-13" ixz="-2.0113e-14" iyy="2.1016e-10" iyz="1.4316e-13" izz="1.9089e-10"/>
+      <origin xyz="-0.01424241 0.00004708 -0.00000827"/>
+    </inertial>
+  </link>
+  <link name="[Knuckle1Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="Palm_[Knuckle1Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.95993109" xyz="0.09200000 0.00000000 0.00000000"/>
+    <parent link="Palm"/>
+    <child link="[Knuckle1Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="-0.261799387799" upper="0.261799387799" velocity="2.00000000"/>
+  </joint>
+  <joint name="[Knuckle1Theta]_Knuckle1" type="fixed">
+    <origin rpy="1.57079633 -0.00000000 -0.95993109" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="[Knuckle1Theta]"/>
+    <child link="Knuckle1"/>
+  </joint>
+  <link name="[F_Prox1Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="Knuckle1_[F_Prox1Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="Knuckle1"/>
+    <child link="[F_Prox1Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="-0.261799387799" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Prox1Theta]_F_Prox1" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.04500000 0.00000000 0.00000000"/>
+    <parent link="[F_Prox1Theta]"/>
+    <child link="F_Prox1"/>
+  </joint>
+  <link name="[F_Middle1Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="F_Prox1_[F_Middle1Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="F_Prox1"/>
+    <child link="[F_Middle1Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="0.0" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Middle1Theta]_F_Middle1" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.02500000 0.00000000 0.00000000"/>
+    <parent link="[F_Middle1Theta]"/>
+    <child link="F_Middle1"/>
+  </joint>
+  <link name="[F_Distal1Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="F_Middle1_[F_Distal1Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="F_Middle1"/>
+    <child link="[F_Distal1Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="0.0" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Distal1Theta]_F_Distal1" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.03000000 0.00000000 0.00000000"/>
+    <parent link="[F_Distal1Theta]"/>
+    <child link="F_Distal1"/>
+  </joint>
+  <link concave="yes" name="Knuckle2">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/Knuckle2.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/Knuckle2.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="7.0470e-11" ixy="-5.6402e-13" ixz="-1.1142e-13" iyy="6.9810e-11" iyz="1.6546e-13" izz="8.1228e-11"/>
+      <origin xyz="-0.00022880 -0.00034175 -0.00051518"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Prox2">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Prox2.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Prox2.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="5.0785e-10" ixy="3.0117e-11" ixz="-1.0495e-11" iyy="2.2465e-09" iyz="-4.4207e-13" izz="2.1476e-09"/>
+      <origin xyz="-0.01948266 -0.00002089 -0.00055437"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Middle2">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Middle2.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Middle2.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="3.2017e-10" ixy="-3.3992e-13" ixz="7.7135e-13" iyy="1.1345e-09" iyz="1.1622e-13" izz="1.0870e-09"/>
+      <origin xyz="-0.01350604 0.00004184 -0.00001214"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Distal2">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Distal2.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Distal2.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="1.1170e-10" ixy="-5.7108e-13" ixz="-2.0113e-14" iyy="2.1016e-10" iyz="1.4316e-13" izz="1.9089e-10"/>
+      <origin xyz="-0.01424241 0.00004708 -0.00000827"/>
+    </inertial>
+  </link>
+  <link name="[Knuckle2Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="Palm_[Knuckle2Theta]" type="revolute">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.09500000 -0.02200000 0.00100000"/>
+    <parent link="Palm"/>
+    <child link="[Knuckle2Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="-0.261799387799" upper="0.261799387799" velocity="2.00000000"/>
+  </joint>
+  <joint name="[Knuckle2Theta]_Knuckle2" type="fixed">
+    <origin rpy="1.57079633 -0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="[Knuckle2Theta]"/>
+    <child link="Knuckle2"/>
+  </joint>
+  <link name="[F_Prox2Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="Knuckle2_[F_Prox2Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="Knuckle2"/>
+    <child link="[F_Prox2Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="-0.261799387799" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Prox2Theta]_F_Prox2" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.04500000 0.00000000 0.00000000"/>
+    <parent link="[F_Prox2Theta]"/>
+    <child link="F_Prox2"/>
+  </joint>
+  <link name="[F_Middle2Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="F_Prox2_[F_Middle2Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="F_Prox2"/>
+    <child link="[F_Middle2Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="0.0" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Middle2Theta]_F_Middle2" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.02500000 0.00000000 0.00000000"/>
+    <parent link="[F_Middle2Theta]"/>
+    <child link="F_Middle2"/>
+  </joint>
+  <link name="[F_Distal2Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="F_Middle2_[F_Distal2Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="F_Middle2"/>
+    <child link="[F_Distal2Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="0.0" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Distal2Theta]_F_Distal2" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.03000000 0.00000000 0.00000000"/>
+    <parent link="[F_Distal2Theta]"/>
+    <child link="F_Distal2"/>
+  </joint>
+  <link concave="yes" name="Knuckle3">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/Knuckle3.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/Knuckle3.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="7.0470e-11" ixy="-5.6402e-13" ixz="-1.1142e-13" iyy="6.9810e-11" iyz="1.6546e-13" izz="8.1228e-11"/>
+      <origin xyz="-0.00022880 -0.00034175 -0.00051518"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Prox3">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Prox3.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Prox3.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="5.0785e-10" ixy="3.0117e-11" ixz="-1.0495e-11" iyy="2.2465e-09" iyz="-4.4207e-13" izz="2.1476e-09"/>
+      <origin xyz="-0.01948266 -0.00002089 -0.00055437"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Middle3">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Middle3.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Middle3.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="3.2017e-10" ixy="-3.3992e-13" ixz="7.7135e-13" iyy="1.1345e-09" iyz="1.1622e-13" izz="1.0870e-09"/>
+      <origin xyz="-0.01350604 0.00004184 -0.00001214"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="F_Distal3">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Distal3.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/F_Distal3.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="1.1170e-10" ixy="-5.7108e-13" ixz="-2.0113e-14" iyy="2.1016e-10" iyz="1.4316e-13" izz="1.9089e-10"/>
+      <origin xyz="-0.01424241 0.00004708 -0.00000827"/>
+    </inertial>
+  </link>
+  <link name="[Knuckle3Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="Palm_[Knuckle3Theta]" type="revolute">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.09100000 -0.04400000 0.00200000"/>
+    <parent link="Palm"/>
+    <child link="[Knuckle3Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="-0.261799387799" upper="0.261799387799" velocity="2.00000000"/>
+  </joint>
+  <joint name="[Knuckle3Theta]_Knuckle3" type="fixed">
+    <origin rpy="1.57079633 -0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="[Knuckle3Theta]"/>
+    <child link="Knuckle3"/>
+  </joint>
+  <link name="[F_Prox3Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="Knuckle3_[F_Prox3Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="Knuckle3"/>
+    <child link="[F_Prox3Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="-0.261799387799" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Prox3Theta]_F_Prox3" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.04500000 0.00000000 0.00000000"/>
+    <parent link="[F_Prox3Theta]"/>
+    <child link="F_Prox3"/>
+  </joint>
+  <link name="[F_Middle3Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="F_Prox3_[F_Middle3Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="F_Prox3"/>
+    <child link="[F_Middle3Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="0.0" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Middle3Theta]_F_Middle3" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.02500000 0.00000000 0.00000000"/>
+    <parent link="[F_Middle3Theta]"/>
+    <child link="F_Middle3"/>
+  </joint>
+  <link name="[F_Distal3Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="F_Middle3_[F_Distal3Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="F_Middle3"/>
+    <child link="[F_Distal3Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="0.0" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[F_Distal3Theta]_F_Distal3" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.03000000 0.00000000 0.00000000"/>
+    <parent link="[F_Distal3Theta]"/>
+    <child link="F_Distal3"/>
+  </joint>
+  <link concave="yes" name="TH_Proximal">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/TH_Proximal.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/TH_Proximal.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="1.2185e-09" ixy="1.6607e-11" ixz="4.5400e-12" iyy="6.0708e-09" iyz="3.4771e-12" izz="6.0708e-09"/>
+      <origin xyz="-0.02195160 0.00004049 0.00003505"/>
+    </inertial>
+  </link>
+  <link name="TH_Proximal_0">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="TH_Middle">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/TH_Middle.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/TH_Middle.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="7.7269e-10" ixy="2.8041e-12" ixz="-4.4471e-13" iyy="3.3642e-09" iyz="-4.2135e-14" izz="3.2818e-09"/>
+      <origin xyz="-0.01669103 0.00008456 0.00000283"/>
+    </inertial>
+  </link>
+  <link name="TH_Middle_0">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <link concave="yes" name="TH_Distal">
+    <visual>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/TH_Distal.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file:///home/omnisky/GraspIt2URDF/data/hand2/TH_Distal.stl" scale="0.00100000 0.00100000 0.00100000"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.10000000"/>
+      <inertia ixx="3.5019e-10" ixy="-1.1682e-11" ixz="-8.4018e-13" iyy="7.0431e-10" iyz="-1.5101e-12" izz="6.4382e-10"/>
+      <origin xyz="-0.01838805 -0.00076441 0.00000510"/>
+    </inertial>
+  </link>
+  <link name="[TH_Proximal_0Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="Palm_[TH_Proximal_0Theta]" type="revolute">
+    <origin rpy="0.78539816 1.57079633 0.00000000" xyz="0.02142388 -0.03607612 0.00800000"/>
+    <parent link="Palm"/>
+    <child link="[TH_Proximal_0Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="-1.0471975512" upper="1.0471975512" velocity="2.00000000"/>
+  </joint>
+  <joint name="[TH_Proximal_0Theta]_TH_Proximal_0" type="fixed">
+    <origin rpy="1.57079633 -0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="[TH_Proximal_0Theta]"/>
+    <child link="TH_Proximal_0"/>
+  </joint>
+  <link name="[TH_ProximalTheta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="TH_Proximal_0_[TH_ProximalTheta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="TH_Proximal_0"/>
+    <child link="[TH_ProximalTheta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="0.0" upper="1.2217304764" velocity="2.00000000"/>
+  </joint>
+  <joint name="[TH_ProximalTheta]_TH_Proximal" type="fixed">
+    <origin rpy="-3.14159265 -0.00000000 1.57079633" xyz="0.00000000 0.03800000 0.00000000"/>
+    <parent link="[TH_ProximalTheta]"/>
+    <child link="TH_Proximal"/>
+  </joint>
+  <link name="[TH_Middle_0Theta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="TH_Proximal_[TH_Middle_0Theta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="TH_Proximal"/>
+    <child link="[TH_Middle_0Theta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="-0.209439510239" upper="0.209439510239" velocity="2.00000000"/>
+  </joint>
+  <joint name="[TH_Middle_0Theta]_TH_Middle_0" type="fixed">
+    <origin rpy="1.57079633 -0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="[TH_Middle_0Theta]"/>
+    <child link="TH_Middle_0"/>
+  </joint>
+  <link name="[TH_MiddleTheta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="TH_Middle_0_[TH_MiddleTheta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="TH_Middle_0"/>
+    <child link="[TH_MiddleTheta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="-0.523598775598" upper="0.523598775598" velocity="2.00000000"/>
+  </joint>
+  <joint name="[TH_MiddleTheta]_TH_Middle" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.03200000 0.00000000 0.00000000"/>
+    <parent link="[TH_MiddleTheta]"/>
+    <child link="TH_Middle"/>
+  </joint>
+  <link name="[TH_DistalTheta]">
+    <inertial>
+      <mass value="0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+  <joint name="TH_Middle_[TH_DistalTheta]" type="revolute">
+    <origin rpy="0.00000000 0.00000000 0.00000000" xyz="0.00000000 0.00000000 0.00000000"/>
+    <parent link="TH_Middle"/>
+    <child link="[TH_DistalTheta]"/>
+    <axis xyz="0.00000000 0.00000000 1.00000000"/>
+    <limit effort="0.10000000" lower="0.0" upper="1.57079632679" velocity="2.00000000"/>
+  </joint>
+  <joint name="[TH_DistalTheta]_TH_Distal" type="fixed">
+    <origin rpy="0.00000000 -0.00000000 0.00000000" xyz="0.03300000 0.00000000 0.00000000"/>
+    <parent link="[TH_DistalTheta]"/>
+    <child link="TH_Distal"/>
+  </joint>
+</robot>
