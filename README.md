@@ -30,7 +30,7 @@ First, run devel/setup.bash to configurate environment setting:
 
 
 Before test or training, you need to run IBS service:
-> rosrun ibs_grasping env
+> rosrun ibs_grasping ibs_env
 
 
 For test:
