@@ -2,12 +2,12 @@ import os
 import xml.dom.minidom as minidom
 import numpy as np
 import open3d as o3d
-from plyfile import PlyData, PlyElement
 from lxml import etree as ET
 import numpy as np
 import trimesh
 import pybullet as p
 import os
+from tqdm import *
 
 shapes = dict()
 grasp_num = 0
@@ -171,22 +171,22 @@ if __name__ == "__main__":
     #     generate_urdf("%s_vhacd.obj"%(name), urdf_dir, urdf_dir)
 
     # Generate BVH and PSet
-    # for name in shapes.keys():
-    #     gp_dir = os.path.join(new_root_dir, name, 'gp')
-    #     # os.system('rm -rf %s'%(gp_dir))
-    #     if not name[:3] == 'ycb':
-    #         print("Jump")
-    #         continue
-    #     if not os.path.exists(gp_dir):
-    #         os.makedirs(gp_dir)
-    #     model_url = os.path.join(new_root_dir, name, 'shape', name+'.obj')
-    #     os.system("cp %s %s"  % (model_url, gp_dir))
-    #     model_url2 = os.path.join(new_root_dir, name, 'gp', name+'.obj')
-    #     print(model_url2)
-    #     mesh_process(model_url2)
+    for name in shapes.keys():
+        gp_dir = os.path.join(new_root_dir, name, 'gp')
+        # os.system('rm -rf %s'%(gp_dir))
+        if not name[:3] == 'ycb':
+            print("Jump")
+            continue
+        if not os.path.exists(gp_dir):
+            os.makedirs(gp_dir)
+        model_url = os.path.join(new_root_dir, name, 'shape', name+'.obj')
+        os.system("cp %s %s"  % (model_url, gp_dir))
+        model_url2 = os.path.join(new_root_dir, name, 'gp', name+'.obj')
+        print(model_url2)
+        mesh_process(model_url2)
         
     # Move grasp file to the directory
-    # for obj in grasp_list:
+    # for obj in tqdm(grasp_list):
     #     gp = os.path.join(grasp_dir, obj)
     #     name = obj.split('.')[0]
     #     grasps = os.listdir(gp)
