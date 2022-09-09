@@ -78,6 +78,7 @@ def mesh_process(mesh_url, remove=False):
             return
         if os.path.exists(mesh_url+".BVH.dat") and os.path.getsize(mesh_url+".BVH.dat")>0:
             return
+    print(mesh_url)
     command=binary+' '+mesh_url+' '+'-0.01'+' '+'0'+' '+'0'
     os.system(command)
 
@@ -174,15 +175,15 @@ if __name__ == "__main__":
     for name in shapes.keys():
         gp_dir = os.path.join(new_root_dir, name, 'gp')
         # os.system('rm -rf %s'%(gp_dir))
-        if not name[:3] == 'ycb':
-            print("Jump")
-            continue
+        # if not name[:3] == 'ycb':
+        #     print("Jump")
+        #     continue
         if not os.path.exists(gp_dir):
             os.makedirs(gp_dir)
         model_url = os.path.join(new_root_dir, name, 'shape', name+'.obj')
         os.system("cp %s %s"  % (model_url, gp_dir))
         model_url2 = os.path.join(new_root_dir, name, 'gp', name+'.obj')
-        print(model_url2)
+        # print(model_url2)
         mesh_process(model_url2)
         
     # Move grasp file to the directory

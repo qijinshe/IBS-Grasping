@@ -48,7 +48,6 @@ parser.add_argument('--updates_per_step', type=int, default=1, metavar='N',
 parser.add_argument('--target_update_interval', type=int, default=1, metavar='N',
                     help='Value target update per no. of updates per step (default: 1)')
 parser.add_argument('--cuda', action="store_true", help='run on CUDA (default: False)')
-###
 parser.add_argument('--batch_size', type=int, default=32, metavar='N',
                     help='batch size (default: 256)')
 parser.add_argument('--num_steps', type=int, default=1000000, metavar='N',
@@ -113,7 +112,6 @@ rl = SAC_FIN_STOP(s_dim, a_dim, args)
 np.random.seed(args.seed)
 torch.manual_seed(args.seed)
 torch.set_num_threads(4)
-env.seed(args.seed)
 
 
 def train_network():

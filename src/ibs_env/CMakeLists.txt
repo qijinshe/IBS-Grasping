@@ -128,10 +128,10 @@ generate_messages(
 #  DEPENDS system_lib
 # )
 catkin_package(
-  INCLUDE_DIRS include
+# INCLUDE_DIRS include
   LIBRARIES ibs_env
   CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
-  DEPENDS system_lib
+# DEPENDS system_lib
 )
 
 ###########

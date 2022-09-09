@@ -2,7 +2,6 @@
 This project is based on our SIGGRAPH2022 paper, [Learning High-DOF Reaching-and-Grasping via Dynamic
 Representation of Gripper-Object Interaction](https://arxiv.org/abs/2204.13998)
 
-**Note: the project is still being updated.**
 
 ## Introduction
 In this project, We adopt Interaction Bisector Surface (IBS), which is a surface composed of points at equal distances to two close by objects as an observation representation in learning high-DOF reach-and-grasp planning. We found that IBS is able and effective to guide the motion of the gripper.
@@ -19,6 +18,7 @@ You can run the command to install them all:
 
 "deepdifferentiablegrasp" is also important in our project.
 Here we only provide [compiled files](https://drive.google.com/drive/folders/1xSJMm63BTmK7nC0Cjk6wA3so6irjcQXJ).
+Note that specific version of Boost (1.58) is necessary to run the file.
 
 Last, you need to compile ROS packages in the root directory:
 >catkin_make

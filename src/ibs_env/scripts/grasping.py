@@ -26,6 +26,7 @@ import gym
 random.seed(123456)
 point_num = 4096 # IBS point num
 # ROS Service Name
+
 ibs_service_name = "get_ibs6"
 load_service_name = "load_obj6"
 load_fp_service_name = "load_obj_fp"
@@ -332,7 +333,7 @@ class IBSEnv(gym.Env):
             hand_config = None
             obj_config = None
             print(len(self.tasks))
-            while hand_config is None:
+            if hand_config is None:
                 shape_url, grasp_url, val  = self.tasks[self.counter_demo%(len(self.tasks))]
                 hand_config, obj_config = config_from_xml(self.manipulator.hand, grasp_url)
             print("Shape:\t", grasp_url.split('/')[-3])
@@ -587,7 +588,7 @@ if __name__ == "__main__":
     episode_num = 0
     ibs_data = []
     mode = 1
-    env.reset(mode=mode)
+    env.reset(mode=mode) # ?
     while not rospy.is_shutdown():
         counter += 1
         action, stop = env.hacker_action()
