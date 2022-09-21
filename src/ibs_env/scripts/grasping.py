@@ -145,7 +145,7 @@ class IBSEnv(gym.Env):
         self.cur_mode = -1
         self.pens = None
         # Object dataset
-        self.data_dir = os.path.join(os.getcwd(), 'Grasp_Dataset_v3')
+        self.data_dir = os.path.join(os.getcwd(), 'Grasp_Dataset_v4')
         self.shapes_train = [shape for shape in os.listdir(self.data_dir) if shape[:2] == 'gd' or shape[:3] == 'kit'] # Training Set
         self.shapes_eval = [shape for shape in os.listdir(self.data_dir) if shape[:3] == 'ycb'] # Validation Set
         self.shapes_test = [shape for shape in os.listdir(self.data_dir) if shape[:3] == 'ycb'] # Testing Set

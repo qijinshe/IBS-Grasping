@@ -119,16 +119,22 @@ if __name__ == "__main__":
     p.connect(p.DIRECT)
     grasp_dir = 'Grasp_Dataset/grasps'
     model_dir = 'Grasp_Dataset/good_shapes'
-    new_root_dir = 'Grasp_Dataset_v3'
+    new_root_dir = 'Grasp_Dataset_v4'
     
     if not os.path.exists(new_root_dir):
         os.mkdir(new_root_dir)
     grasp_list = os.listdir(grasp_dir)
     model_list = os.listdir(model_dir)
-    # 
+    remove_list = []
+    with open('remove','r') as f:
+       remove_list = [line[:-1] for line in f.readlines()]
+    
     for obj in model_list:
         str_list = obj.split('.')
         name = str_list[0]
+        if name in remove_list:
+            print(name)
+            continue
         shapes[name] = 0
         old_path = os.path.join(model_dir, name)
         new_path = os.path.join(new_root_dir, name)
@@ -172,19 +178,19 @@ if __name__ == "__main__":
     #     generate_urdf("%s_vhacd.obj"%(name), urdf_dir, urdf_dir)
 
     # Generate BVH and PSet
-    for name in shapes.keys():
-        gp_dir = os.path.join(new_root_dir, name, 'gp')
-        # os.system('rm -rf %s'%(gp_dir))
-        # if not name[:3] == 'ycb':
-        #     print("Jump")
-        #     continue
-        if not os.path.exists(gp_dir):
-            os.makedirs(gp_dir)
-        model_url = os.path.join(new_root_dir, name, 'shape', name+'.obj')
-        os.system("cp %s %s"  % (model_url, gp_dir))
-        model_url2 = os.path.join(new_root_dir, name, 'gp', name+'.obj')
-        # print(model_url2)
-        mesh_process(model_url2)
+    # for name in shapes.keys():
+    #     gp_dir = os.path.join(new_root_dir, name, 'gp')
+    #     # os.system('rm -rf %s'%(gp_dir))
+    #     # if not name[:3] == 'ycb':
+    #     #     print("Jump")
+    #     #     continue
+    #     if not os.path.exists(gp_dir):
+    #         os.makedirs(gp_dir)
+    #     model_url = os.path.join(new_root_dir, name, 'shape', name+'.obj')
+    #     os.system("cp %s %s"  % (model_url, gp_dir))
+    #     model_url2 = os.path.join(new_root_dir, name, 'gp', name+'.obj')
+    #     # print(model_url2)
+    #     mesh_process(model_url2)
         
     # Move grasp file to the directory
     # for obj in tqdm(grasp_list):

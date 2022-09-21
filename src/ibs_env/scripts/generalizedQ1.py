@@ -15,7 +15,7 @@ def find_bvh_path(shape):
     '''
         Find BVH file path. 
     '''
-    dirs = os.path.join(os.getcwd(), 'Grasp_Dataset_v3')
+    dirs = os.path.join(os.getcwd(), 'Grasp_Dataset_v4')
     shape_urdf = os.path.join(dirs, shape, 'gp', "%s.obj.BVH.dat"%(shape))
     return [shape_urdf]
     

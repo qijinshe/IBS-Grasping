@@ -312,7 +312,7 @@ class SimpleSimulation(object):
         self.mount_gripper = Gripper(self.client, self.mount_base_pose)
         self.bid = self.mount_gripper._body_id
         self.mount_gripper.move(np.zeros(24), reset=True)
-        self.urdf_dirs = os.path.join(os.getcwd(), 'Grasp_Dataset_v3')
+        self.urdf_dirs = os.path.join(os.getcwd(), 'Grasp_Dataset_v4')
 
 
     def initalize_obj(self, obj_name, obj_config, type=0):

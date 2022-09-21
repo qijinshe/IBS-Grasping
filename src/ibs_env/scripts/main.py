@@ -54,7 +54,7 @@ parser.add_argument('--num_steps', type=int, default=1000000, metavar='N',
                     help='maximum number of steps (default: 1000000)')
 parser.add_argument('--start_steps', type=int, default=50000, metavar='Nastype', # change
                     help='Steps sampling random actions (default: 10000)')
-parser.add_argument('--replay_size', type=int, default=100000, metavar='N',
+parser.add_argument('--replay_size', type=int, default=30000, metavar='N',
                     help='size of replay buffer (default: 1000000)')
 
 parser.add_argument('--model_name', type=str, default='fine', metavar='NAME',
@@ -64,7 +64,7 @@ parser.add_argument('--train_model', action='store_true', help="train model")
 parser.add_argument('--con', action='store_true', help="continue train the given model")
 args = parser.parse_args()
 
-WORD = "IBSGrasping"
+WORD = "remove"
 DATE = time.strftime('%Y-%m-%d_%H:%M:%S',time.localtime())
 NAME = DATE + "_" + WORD # Model Name
 TEST_PREFIX = "" # Test file prefix
@@ -86,11 +86,12 @@ if TRAIN_MODEL:
     if CONTINUE:
         first_output = "Continue train model %s"%(NAME)
 else:
-    first_output = "Test model %s"%(NAME)
+    first_output = "Test model %s"%(NAME) 
 print("Task: ", first_output)
 time.sleep(3)
 
 ememory = ReplayMemory(args.replay_size)
+# dmemory = ReplayMemory(args.start_steps) #
 dmemory = ReplayMemory(50000) #
 pos_num = None
 
