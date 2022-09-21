@@ -18,7 +18,7 @@ You can run the command to install them all:
 
 "deepdifferentiablegrasp" is also important in our project.
 Here we only provide [compiled files](https://drive.google.com/drive/folders/1xSJMm63BTmK7nC0Cjk6wA3so6irjcQXJ).
-Note that specific version of Boost (1.58) is necessary to run the file.
+Note that specific versions of 'Boost'(1.58) and 'Mosek'(9.0) are necessary to run the file.
 
 Last, you need to compile ROS packages in the root directory:
 >catkin_make
