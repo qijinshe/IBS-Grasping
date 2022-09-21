@@ -126,7 +126,7 @@ if __name__ == "__main__":
     grasp_list = os.listdir(grasp_dir)
     model_list = os.listdir(model_dir)
     remove_list = []
-    with open('remove','r') as f:
+    with open('remove.txt','r') as f:
        remove_list = [line[:-1] for line in f.readlines()]
     
     for obj in model_list:
