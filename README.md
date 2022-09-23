@@ -58,7 +58,7 @@ which includes 500 watertight objects collected from four datasets (KIT, GD, YCB
 
 
 The data processing script is provided in the root directory.
-The script will generate following files for you:
+The script will remove objects unsuitable for grasping and generate following files for you:
 * ".pcd": pointclouds sampled from origin meshes, used for IBS computation.
 * "_vhacd.obj" and ".urdf": approximate convex decomposition of objectsusing the VHACD algorithm and the URDF wrappers of objects, used for Pybullet Simulation.
 * ".bvh" (optional): precomputed files, used for grasp quality computation. If you don't want to train models or compute grasp quality, you don't need to generate these files.
