@@ -54,7 +54,7 @@ parser.add_argument('--num_steps', type=int, default=1000000, metavar='N',
                     help='maximum number of steps (default: 1000000)')
 parser.add_argument('--start_steps', type=int, default=50000, metavar='Nastype', # change
                     help='Steps sampling random actions (default: 10000)')
-parser.add_argument('--replay_size', type=int, default=30000, metavar='N',
+parser.add_argument('--replay_size', type=int, default=100000, metavar='N',
                     help='size of replay buffer (default: 1000000)')
 
 parser.add_argument('--model_name', type=str, default='fine', metavar='NAME',
