@@ -4,13 +4,13 @@ Representation of Gripper-Object Interaction](https://arxiv.org/abs/2204.13998)
 
 
 ## Introduction
-In this project, We adopt Interaction Bisector Surface (IBS), which is a surface composed of points at equal distances to two close by objects as an observation representation in learning high-DOF reach-and-grasp planning. We found that IBS is able and effective to guide the motion of the gripper.
+In this project, We adopt Interaction Bisector Surface (IBS), which is a surface composed of points at equal distances to two close by objects as the observation representation in learning high-DOF reach-and-grasp planning. We found that IBS is able and effective to guide the motion of the gripper.
 
 
 ## Installation
 This probject partly depends on ROS, you need to [install ROS](http://wiki.ros.org/melodic/Installation) first (In our environment, we use ROS melodic).
 
-The necessary Python packages are list in the file "requirement.txt".
+The necessary Python packages are listed in the file "requirement.txt".
 
 
 You can run the command to install them all:
@@ -18,7 +18,7 @@ You can run the command to install them all:
 
 "deepdifferentiablegrasp" is also important in our project.
 Here we only provide [compiled files](https://drive.google.com/drive/folders/1xSJMm63BTmK7nC0Cjk6wA3so6irjcQXJ).
-Note that specific versions of 'Boost'(1.58) and 'Mosek'(9.0) are necessary to run the file.
+Note that specific versions of 'Boost'(1.58) and 'Mosek'(9.0) are necessary to run these files.
 
 Last, you need to compile ROS packages in the root directory:
 >catkin_make
@@ -29,7 +29,7 @@ First, run devel/setup.bash to configurate environment setting:
 > source devel/setup.bash
 
 
-Before test or training, you need to run IBS service:
+Before test or training, you need to run the IBS computation service:
 > rosrun ibs_grasping ibs_env
 
 
@@ -49,7 +49,7 @@ For trainning
 
 
 # Visualization
-You can use [RVIZ](http://wiki.ros.org/rviz) package to visualize the IBS. The configuration file are provided in the root directory (ibs_visualization.rviz).
+You can use [RVIZ](http://wiki.ros.org/rviz) package to visualize the IBS. The configuration file is provided in the root directory (ibs_visualization.rviz).
 
 
 ## Data Preparation
