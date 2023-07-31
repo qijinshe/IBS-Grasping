@@ -2,6 +2,8 @@
 This project is based on our SIGGRAPH2022 paper, [Learning High-DOF Reaching-and-Grasping via Dynamic
 Representation of Gripper-Object Interaction](https://arxiv.org/abs/2204.13998)
 
+![IBS-Grasping Teaser](docs/teaser2.png)
+
 
 ## Introduction
 In this project, We adopt Interaction Bisector Surface (IBS), which is a surface composed of points at equal distances to two close by objects as the observation representation in learning high-DOF reach-and-grasp planning. We found that IBS is able and effective to guide the motion of the gripper.
